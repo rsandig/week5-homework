@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-    @product_list = []
+    @product_list = Product.all
   end
 
   def show
-    @product = "iPhone"
+    @id = params[:id]
+    @product = Product.find(8)
   end
 
 end
